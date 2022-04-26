@@ -45,7 +45,7 @@
 	}
 </style>
 
-<body style="background-color:rgb(240, 240, 240);">
+<body style="background-color:rgb(240, 240, 240);" onload="Myfunction()">
 	<h1>Simple Form</h1>
 	<form action="https://formspree.io/f/xoqrdgjo" method="post">
 		<label for="Name">Name: <input type="Name" name="Name" id="name" placeholder="Name" required></label><br>
@@ -55,6 +55,8 @@
 
 		<label for="Email">Email: <input type="email" name="Email" id="email" placeholder="Email ID"
 			pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" title="Enter valid email ID" required></label><br>
+		
+		<label for="DOB">DOB: <input type="date" id="DOB" min="1920-01-01" required></label><br>
 
 		<textarea name="Message" id="Message" cols="30" rows="10" placeholder="Type a Message" required></textarea><br>
 
@@ -63,5 +65,10 @@
 		<input type="Reset" id="reset">
 	</form>
 </body>
-
+	<script>
+	function Myfunction(){
+debugger;
+document.getElementById('DOB').max=new Date().toISOString().slice(0, 10);
+}
+	</script>
 </html>
