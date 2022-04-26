@@ -1,0 +1,55 @@
+function validateUsername(Username) {
+    var reg1 = /^[a-zA-Z ]+$/;
+    if (Username.match(reg1)) {
+        return true;
+    } else
+        return false;
+}
+function validateEmail(Email) {
+    var reg2 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (Email.match(reg2)) {
+        return true;
+    } else
+        return false;
+
+}
+
+function validateMobnum(Mobno) {
+debugger;
+    var reg3 = /^[6789]\d{9}$/;
+    if (Mobno.match(reg3)) {
+        return true;
+    } else
+        return false;
+
+}
+function validateGender(Gender) {
+    var reg4 = /^male$|^female$|^others|^Male$|^Female$|^Others/;
+    if (Gender.match(reg4)) {
+        return true;
+    } else
+        return false;
+
+}
+
+
+
+
+if (Username == '') {
+    toastr.error("Please enter your name","",position);
+    return false;
+
+}
+if (!validateUsername(Username)) {
+     toastr.error("Please enter the valid name","",postion);
+    return false;
+}
+
+
+
+DATE Validation
+function Myfunction(){
+debugger;
+document.getElementById('DOB').max=new Date().toISOString().slice(0, 10);
+
+}
